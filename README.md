@@ -86,3 +86,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 4. php artisan migrate
 5. php artisan db:seed
 6. php artisan serve
+7. Login with username:"admin@gmail.com" and password:"password"
