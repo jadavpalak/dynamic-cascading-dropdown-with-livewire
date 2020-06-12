@@ -17,15 +17,17 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-group">
-                                <label for="sel1">Select Sub Category:</label>
-                                <select name="subCategory" wire:model="subCategory" class="form-control {{ count($this->subcategories)==0 ? 'hidden' : '' }}" id="sel1">
-                                <option value=''>Choose A Sub Category</option>
-                                @foreach($this->subcategories as $cat)
-                                    <option value={{ $cat->id }}>{{ $cat->name }}</option>
-                                @endforeach
-                                </select>
-                            </div>
+                            @if(count($this->subcategories) > 0) 
+                                <div class="form-group">
+                                    <label for="sel1">Select Sub Category:</label>
+                                    <select name="subCategory" wire:model="subCategory" class="form-control {{ count($this->subcategories)==0 ? 'hidden' : '' }}" id="sel2">
+                                    <option value=''>Choose A Sub Category</option>
+                                    @foreach($this->subcategories as $cat)
+                                        <option value={{ $cat->id }}>{{ $cat->name }}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                            @endif
                         </div>
                 </div>
             </div>
